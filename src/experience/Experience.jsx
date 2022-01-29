@@ -8,48 +8,47 @@ export const Experience = () => {
         <div className="timeline">
           <ul>
             <li className="timeline-item time primary">
-              <h5>Self-Employed, Brisbane</h5>
+              <h5>Rep Connect | Reputation, Hyderabad</h5>
               <p>
-                <time>Sep 2014 - Aug 2014</time>
+                <time>NOVEMBER 2020 - PRESENT</time>
               </p>
             </li>
             <li className="timeline-item description primary">
-              <h5>Visual Designer</h5>
+              <h5>Software Engineer - Frontend</h5>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repellat asperiores molestiae veritatis quas dolor enim
-                voluptas, amet, exercitationem nobis vero illo dolore est ipsum
-                ratione possimus pariatur officia optio necessitatibus!
+                Developed various React components for the front-end of Rep
+                Connect Module, including a complex multi-step self-serve
+                wizard. Added Node.js APIs, React hooks for polling the server,
+                etc.
               </p>
             </li>
             <li className="timeline-item time secondary">
-              <h5>Self-Employed, Brisbane</h5>
+              <h5>Domino Data Lab | Zessta, Hyderabad</h5>
               <p>
-                <time>Sep 2014 - Aug 2014</time>
+                <time>JULY 2020 - NOVEMBER 2020</time>
               </p>
             </li>
             <li className="timeline-item description secondary">
-              <h5>Visual Designer</h5>
+              <h5>Frontend Engineer</h5>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repellat asperiores molestiae veritatis quas dolor enim
-                voluptas, amet, exercitationem nobis vero illo dolore est ipsum
-                ratione possimus pariatur officia optio necessitatibus!
+                Developed the Workspaces and Git-based projects sections of
+                Domino's MLOps platform. Revamped the UI/UX of these sections to
+                increase the performance and made them more convenient for the
+                data scientists to use.
               </p>
             </li>
             <li className="timeline-item time tertiary">
-              <h5>Self-Employed, Brisbane</h5>
+              <h5>Arealytics | Zessta, Hyderabad</h5>
               <p>
-                <time>Sep 2014 - Aug 2014</time>
+                <time>MAY 2019 - JULY 2020</time>
               </p>
             </li>
             <li className="timeline-item description tertiary">
-              <h5>Visual Designer</h5>
+              <h5>Full Stack Engineer</h5>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repellat asperiores molestiae veritatis quas dolor enim
-                voluptas, amet, exercitationem nobis vero illo dolore est ipsum
-                ratione possimus pariatur officia optio necessitatibus!
+                Developed an angular app for allowing the professional services
+                team to build HTML templates using drag and drop. Built a web
+                component using Angular Elements that displays Arealytics data.
               </p>
             </li>
           </ul>

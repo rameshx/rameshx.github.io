@@ -78,7 +78,7 @@ $circle-translate: translate(-50%, -50%);
       padding: 0;
 
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
       column-gap: $column-gap;
       row-gap: $row-gap;
 
@@ -97,8 +97,6 @@ $circle-translate: translate(-50%, -50%);
       }
 
       .timeline-item.time {
-        justify-self: end;
-
         time {
           letter-spacing: 0.1em;
         }
