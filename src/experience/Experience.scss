@@ -1,0 +1,11 @@
+@use '../styles';
+
+.experience {
+    min-height: 100vh;
+    background-color: styles.$section-background;
+}
+
+.container {
+    height: 400px;
+    background-color: aqua;
+}
