@@ -8,13 +8,13 @@ export const Experience = () => {
         <div className="timeline">
           <ul>
             <li className="timeline-item time primary">
-              <h4>Self-Employed, Brisbane</h4>
+              <h5>Self-Employed, Brisbane</h5>
               <p>
                 <time>Sep 2014 - Aug 2014</time>
               </p>
             </li>
             <li className="timeline-item description primary">
-              <h4>Visual Designer</h4>
+              <h5>Visual Designer</h5>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Repellat asperiores molestiae veritatis quas dolor enim
@@ -23,13 +23,13 @@ export const Experience = () => {
               </p>
             </li>
             <li className="timeline-item time secondary">
-              <h4>Self-Employed, Brisbane</h4>
+              <h5>Self-Employed, Brisbane</h5>
               <p>
                 <time>Sep 2014 - Aug 2014</time>
               </p>
             </li>
             <li className="timeline-item description secondary">
-              <h4>Visual Designer</h4>
+              <h5>Visual Designer</h5>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Repellat asperiores molestiae veritatis quas dolor enim
@@ -38,13 +38,13 @@ export const Experience = () => {
               </p>
             </li>
             <li className="timeline-item time tertiary">
-              <h4>Self-Employed, Brisbane</h4>
+              <h5>Self-Employed, Brisbane</h5>
               <p>
                 <time>Sep 2014 - Aug 2014</time>
               </p>
             </li>
             <li className="timeline-item description tertiary">
-              <h4>Visual Designer</h4>
+              <h5>Visual Designer</h5>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Repellat asperiores molestiae veritatis quas dolor enim

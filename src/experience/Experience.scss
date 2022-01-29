@@ -6,7 +6,7 @@ $row-gap: 3rem;
 
 $outer-circle-size: 50px;
 $inner-circle-size: 25px;
-$outer-circle-translate: translate(-50%, 0);
+$circle-translate: translate(-50%, -50%);
 
 @mixin outer-circle {
   content: '';
@@ -20,6 +20,10 @@ $outer-circle-translate: translate(-50%, 0);
   background-color: $background-section;
   border-radius: 50%;
   border: $border;
+
+  top: 50%;
+  left: calc(-1 * ($column-gap/2));
+  transform: $circle-translate;
 }
 
 @mixin inner-circle {
@@ -32,6 +36,10 @@ $outer-circle-translate: translate(-50%, 0);
   block-size: $inner-circle-size;
 
   border-radius: 50%;
+
+  top: 50%;
+  left: calc(-1 * ($column-gap/2));
+  transform: $circle-translate;
 }
 
 .experience-container {
@@ -49,15 +57,16 @@ $outer-circle-translate: translate(-50%, 0);
   }
 
   .timeline {
+    margin-inline: calc($column-gap/2);
     position: relative;
 
     &::after {
       content: '';
-      block-size: 100%;
 
       position: absolute;
       inset-inline-start: 50%;
-      inset-block-start: 0;
+      inset-block-start: $outer-circle-size;
+      inset-block-end: 0;
       transform: translateX(-50%);
 
       border-left: $border;
@@ -76,13 +85,13 @@ $outer-circle-translate: translate(-50%, 0);
       .timeline-item {
         display: block;
 
-        &.primary h4::after {
+        &.primary h5::after {
           background-color: $color-primary;
         }
-        &.secondary h4::after {
+        &.secondary h5::after {
           background-color: $color-secondary;
         }
-        &.tertiary h4::after {
+        &.tertiary h5::after {
           background-color: $color-tertiary;
         }
       }
@@ -96,35 +105,28 @@ $outer-circle-translate: translate(-50%, 0);
       }
 
       .timeline-item.description {
-        h4 {
+        h5 {
           position: relative;
 
           &::before {
             @include outer-circle();
-
-            left: calc(-1 * ($column-gap/2));
-            transform: $outer-circle-translate;
           }
 
           &::after {
             @include inner-circle();
-
-            top: 0;
-            left: calc(-1 * ($column-gap/2));
-            transform: translate(-50%, 50%);
           }
         }
       }
 
-      .timeline-item.time:hover + .timeline-item.description h4,
-      .timeline-item.description:hover h4 {
+      .timeline-item.time:hover + .timeline-item.description h5,
+      .timeline-item.description:hover h5 {
         &::before {
           animation: outer-circle-spin infinite 5s linear;
         }
       }
     }
 
-    h4 {
+    h5 {
       margin: 0;
       margin-block-end: 1rem;
       font-weight: 600;
@@ -138,12 +140,9 @@ $outer-circle-translate: translate(-50%, 0);
 
 @media (max-width: 768px) {
   $row-gap: 2rem;
-  $outer-circle-translate: translate(-50%, 0);
 
   .experience {
     .timeline {
-      margin-inline-start: calc($column-gap/2);
-      
       &::after {
         inset-inline-start: 0;
       }
@@ -157,22 +156,17 @@ $outer-circle-translate: translate(-50%, 0);
           justify-self: start;
         }
 
-        .timeline-item.time h4 {
+        .timeline-item.time h5 {
           position: relative;
           &::before {
             @include outer-circle();
-            left: calc(-1 * ($column-gap/2));
-            transform: $outer-circle-translate;
           }
           &::after {
             @include inner-circle();
-            top: 0;
-            left: calc(-1 * ($column-gap/2));
-            transform: translate(-50%, 50%);
           }
         }
 
-        .timeline-item.description h4 {
+        .timeline-item.description h5 {
           &::after {
             content: none;
           }
@@ -181,7 +175,7 @@ $outer-circle-translate: translate(-50%, 0);
           }
         }
 
-        .timeline-item.time:hover h4 {
+        .timeline-item.time:hover h5 {
           &::before {
             animation: outer-circle-spin infinite 5s linear;
           }
@@ -193,9 +187,9 @@ $outer-circle-translate: translate(-50%, 0);
 
 @keyframes outer-circle-spin {
   from {
-    transform: $outer-circle-translate rotate(0deg);
+    transform: $circle-translate rotate(0deg);
   }
   to {
-    transform: $outer-circle-translate rotate(360deg);
+    transform: $circle-translate rotate(360deg);
   }
 }
