@@ -2,7 +2,12 @@ import { Experience } from './experience/Experience';
 import './App.scss';
 
 function App() {
-  return <Experience />;
+  return (
+    <>
+      
+      <Experience />
+    </>
+  );
 }
 
 export default App;

@@ -1,11 +1,201 @@
-@use '../styles';
+@use '../styles/variables' as *;
 
-.experience {
-    min-height: 100vh;
-    background-color: styles.$section-background;
+$border: 2px dashed $border-color-experience;
+$column-gap: 7rem;
+$row-gap: 3rem;
+
+$outer-circle-size: 50px;
+$inner-circle-size: 25px;
+$outer-circle-translate: translate(-50%, 0);
+
+@mixin outer-circle {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  display: block;
+
+  inline-size: $outer-circle-size;
+  block-size: $outer-circle-size;
+
+  background-color: $background-section;
+  border-radius: 50%;
+  border: $border;
 }
 
-.container {
-    height: 400px;
-    background-color: aqua;
+@mixin inner-circle {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  display: block;
+
+  inline-size: $inner-circle-size;
+  block-size: $inner-circle-size;
+
+  border-radius: 50%;
+}
+
+.experience-container {
+  background-color: $background-section;
+}
+
+.experience {
+  padding-block: 5rem;
+
+  h2 {
+    text-align: center;
+    color: $color-text-1;
+    font-weight: 600;
+    margin-block-start: 0;
+  }
+
+  .timeline {
+    position: relative;
+
+    &::after {
+      content: '';
+      block-size: 100%;
+
+      position: absolute;
+      inset-inline-start: 50%;
+      inset-block-start: 0;
+      transform: translateX(-50%);
+
+      border-left: $border;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: $column-gap;
+      row-gap: $row-gap;
+
+      .timeline-item {
+        display: block;
+
+        &.primary h4::after {
+          background-color: $color-primary;
+        }
+        &.secondary h4::after {
+          background-color: $color-secondary;
+        }
+        &.tertiary h4::after {
+          background-color: $color-tertiary;
+        }
+      }
+
+      .timeline-item.time {
+        justify-self: end;
+
+        time {
+          letter-spacing: 0.1em;
+        }
+      }
+
+      .timeline-item.description {
+        h4 {
+          position: relative;
+
+          &::before {
+            @include outer-circle();
+
+            left: calc(-1 * ($column-gap/2));
+            transform: $outer-circle-translate;
+          }
+
+          &::after {
+            @include inner-circle();
+
+            top: 0;
+            left: calc(-1 * ($column-gap/2));
+            transform: translate(-50%, 50%);
+          }
+        }
+      }
+
+      .timeline-item.time:hover + .timeline-item.description h4,
+      .timeline-item.description:hover h4 {
+        &::before {
+          animation: outer-circle-spin infinite 5s linear;
+        }
+      }
+    }
+
+    h4 {
+      margin: 0;
+      margin-block-end: 1rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  $row-gap: 2rem;
+  $outer-circle-translate: translate(-50%, 0);
+
+  .experience {
+    .timeline {
+      margin-inline-start: calc($column-gap/2);
+      
+      &::after {
+        inset-inline-start: 0;
+      }
+
+      ul {
+        margin-inline-start: calc($column-gap/2);
+        grid-template-columns: 1fr;
+        row-gap: $row-gap;
+
+        .timeline-item.time {
+          justify-self: start;
+        }
+
+        .timeline-item.time h4 {
+          position: relative;
+          &::before {
+            @include outer-circle();
+            left: calc(-1 * ($column-gap/2));
+            transform: $outer-circle-translate;
+          }
+          &::after {
+            @include inner-circle();
+            top: 0;
+            left: calc(-1 * ($column-gap/2));
+            transform: translate(-50%, 50%);
+          }
+        }
+
+        .timeline-item.description h4 {
+          &::after {
+            content: none;
+          }
+          &::before {
+            content: none;
+          }
+        }
+
+        .timeline-item.time:hover h4 {
+          &::before {
+            animation: outer-circle-spin infinite 5s linear;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes outer-circle-spin {
+  from {
+    transform: $outer-circle-translate rotate(0deg);
+  }
+  to {
+    transform: $outer-circle-translate rotate(360deg);
+  }
 }
