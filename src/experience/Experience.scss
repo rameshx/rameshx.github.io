@@ -1,4 +1,4 @@
-@use '../styles/variables' as *;
+@use "../styles/variables" as *;
 
 $border: 2px dashed $border-color-experience;
 $column-gap: 7rem;
@@ -9,7 +9,7 @@ $inner-circle-size: 25px;
 $circle-translate: translate(-50%, -50%);
 
 @mixin outer-circle {
-  content: '';
+  content: "";
   position: absolute;
   z-index: 1;
   display: block;
@@ -27,7 +27,7 @@ $circle-translate: translate(-50%, -50%);
 }
 
 @mixin inner-circle {
-  content: '';
+  content: "";
   position: absolute;
   z-index: 2;
   display: block;
@@ -57,11 +57,11 @@ $circle-translate: translate(-50%, -50%);
   }
 
   .timeline {
-    margin-inline: calc($column-gap/2);
+    margin-inline: 0.5rem;
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
 
       position: absolute;
       inset-inline-start: 50%;
@@ -141,6 +141,8 @@ $circle-translate: translate(-50%, -50%);
 
   .experience {
     .timeline {
+      margin-inline: 2rem;
+
       &::after {
         inset-inline-start: 0;
       }
@@ -179,6 +181,14 @@ $circle-translate: translate(-50%, -50%);
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .experience {
+    .timeline {
+      margin-inline: 2.5rem;
     }
   }
 }
