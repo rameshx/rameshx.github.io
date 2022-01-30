@@ -1,4 +1,4 @@
-import './Experience.scss';
+import "./Experience.scss";
 
 export const Experience = () => {
   return (
@@ -18,8 +18,7 @@ export const Experience = () => {
               <p>
                 Developed various React components for the front-end of Rep
                 Connect Module, including a complex multi-step self-serve
-                wizard. Added Node.js APIs, React hooks for polling the server,
-                etc.
+                wizard. Added Node.js APIs, React hooks for reusability, etc.
               </p>
             </li>
             <li className="timeline-item time secondary">

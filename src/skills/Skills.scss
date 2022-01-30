@@ -19,7 +19,7 @@
       gap: $tabs-grid-gap;
 
       .tab {
-        border: 2px solid $border-color-skills;
+        border: 2px solid $border-color-1;
         border-radius: 1.5rem;
         padding: 2rem;
 
@@ -107,7 +107,7 @@
           grid-template-columns: 1fr;
           grid-template-rows: 75px 1fr;
           justify-items: center;
-          row-gap: 1.5rem;
+          row-gap: 1rem;
 
           .icon-wrapper {
             block-size: 100%;

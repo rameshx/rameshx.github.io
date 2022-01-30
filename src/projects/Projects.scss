@@ -1,0 +1,98 @@
+@use "../styles/variables" as *;
+
+.projects-container {
+  .projects {
+    padding-block: 5rem;
+
+    h2 {
+      text-align: center;
+      color: $color-text-1;
+      font-weight: 600;
+      margin-block-start: 0;
+    }
+
+    $icon-wrapper-size: 100px;
+
+    .swiper-slide {
+      width: auto;
+    }
+
+    .project {
+      margin-block-start: calc($icon-wrapper-size/2);
+
+      display: inline-block;
+      position: relative;
+
+      max-inline-size: 700px;
+      border: 2px solid $border-color-1;
+      border-radius: 1.5rem;
+      padding: 3rem;
+
+      .icon-wrapper {
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: 50%;
+        transform: translate(-50%, -50%);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        inline-size: $icon-wrapper-size;
+        block-size: $icon-wrapper-size;
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow: 0 0 0 2px $border-color-1;
+        background-color: $color-primary;
+        color: white;
+
+        svg {
+          font-size: 48px;
+        }
+      }
+
+      .body {
+        text-align: center;
+
+        .description {
+          margin: 0;
+          margin-block-start: calc($icon-wrapper-size/2);
+          color: $color-text-2;
+        }
+
+        hr {
+          margin-block: 1rem;
+          border-color: $border-color-1;
+          background-color: transparent;
+          border-style: solid;
+        }
+
+        .name {
+          color: $color-text-1;
+          margin: 0;
+        }
+      }
+    }
+
+    @media (max-width: $width-xl) {
+        .project {
+            max-inline-size: 650px;
+        }
+    }
+    @media (max-width: $width-l) {
+        .project {
+            max-inline-size: 500px;
+        }
+    }
+    @media (max-width: $width-m) {
+        .project {
+            max-inline-size: 400px;
+        }
+    }
+    @media (max-width: $width-s) {
+        .project {
+            max-inline-size: 80vw;
+        }
+    }
+  }
+}
