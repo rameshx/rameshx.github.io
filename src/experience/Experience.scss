@@ -128,10 +128,12 @@ $circle-translate: translate(-50%, -50%);
       margin: 0;
       margin-block-end: 1rem;
       font-weight: 600;
+      color: $color-text-1;
     }
 
     p {
       margin: 0;
+      color: $color-text-2;
     }
   }
 }

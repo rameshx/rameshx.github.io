@@ -1,0 +1,128 @@
+@use "../styles/variables" as *;
+
+.skills-container {
+  .skills {
+    padding-block: 5rem;
+
+    h2 {
+      text-align: center;
+      color: $color-text-1;
+      font-weight: 600;
+      margin-block-start: 0;
+    }
+
+    $tabs-grid-gap: 1rem;
+
+    .tabs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $tabs-grid-gap;
+
+      .tab {
+        border: 2px solid $border-color-skills;
+        border-radius: 1.5rem;
+        padding: 2rem;
+
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        column-gap: 2rem;
+        align-items: center;
+
+        .icon-wrapper {
+          inline-size: 100%;
+          block-size: auto;
+          aspect-ratio: 1 / 1;
+          border-radius: 50%;
+
+          color: white;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          svg {
+            font-size: 36px;
+          }
+        }
+
+        &.primary .icon-wrapper {
+          background-color: $color-primary;
+        }
+        &.secondary .icon-wrapper {
+          background-color: $color-secondary;
+        }
+        &.tertiary .icon-wrapper {
+          background-color: $color-tertiary;
+        }
+        &.quaternary .icon-wrapper {
+          background-color: $color-quaternary;
+        }
+        &.quinary .icon-wrapper {
+          background-color: $color-quinary;
+        }
+
+        .text-wrapper {
+          width: 100%;
+
+          h5,
+          p {
+            margin: 0;
+          }
+
+          h5 {
+            font-weight: 600;
+            color: $color-text-1;
+          }
+
+          p {
+            color: $color-text-2;
+          }
+        }
+      }
+
+      .tab.primary {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+}
+
+@media (max-width: $width-l) {
+  .skills-container {
+    .skills {
+      .tabs {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+@media (max-width: $width-s) {
+  .skills-container {
+    .skills {
+      .tabs {
+        margin-inline: 2.5rem;
+
+        .tab {
+          grid-template-columns: 1fr;
+          grid-template-rows: 75px 1fr;
+          justify-items: center;
+          row-gap: 1.5rem;
+
+          .icon-wrapper {
+            block-size: 100%;
+            inline-size: auto;
+
+            svg {
+              font-size: 24px;
+            }
+          }
+
+          .text-wrapper {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
