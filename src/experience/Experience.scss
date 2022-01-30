@@ -136,7 +136,7 @@ $circle-translate: translate(-50%, -50%);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $width-m) {
   $row-gap: 2rem;
 
   .experience {
@@ -185,7 +185,7 @@ $circle-translate: translate(-50%, -50%);
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: $width-s) {
   .experience {
     .timeline {
       margin-inline: 2.5rem;

@@ -1,34 +1,36 @@
+@use "./variables" as *;
+
 .container {
-    width: 100%;
-    margin-inline: auto;
+  width: 100%;
+  margin-inline: auto;
 }
 
-@media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
+@media (min-width: $width-s) {
+  .container {
+    max-width: 540px;
+  }
 }
 
-@media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
+@media (min-width: $width-m) {
+  .container {
+    max-width: 720px;
+  }
 }
 
-@media (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
+@media (min-width: $width-l) {
+  .container {
+    max-width: 960px;
+  }
 }
 
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
-    }
+@media (min-width: $width-xl) {
+  .container {
+    max-width: 1140px;
+  }
 }
 
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1320px;
-    }
+@media (min-width: $width-xxl) {
+  .container {
+    max-width: 1320px;
+  }
 }
