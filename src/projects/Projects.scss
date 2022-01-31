@@ -51,6 +51,22 @@
         }
       }
 
+      &.primary .icon-wrapper {
+        background-color: $color-primary;
+      }
+      &.secondary .icon-wrapper {
+        background-color: $color-secondary;
+      }
+      &.tertiary .icon-wrapper {
+        background-color: $color-tertiary;
+      }
+      &.quaternary .icon-wrapper {
+        background-color: $color-quaternary;
+      }
+      &.quinary .icon-wrapper {
+        background-color: $color-quinary;
+      }
+
       .body {
         text-align: center;
 
