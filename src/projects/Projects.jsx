@@ -27,7 +27,7 @@ const PROJECTS = [
     icon: <BusinessCenterOutlinedIcon />,
     name: 'Portfolio',
     description:
-      'This portfolio built using React, SASS (SCSS) and material icons.',
+      'The responsive portfolio you are viewing now is built using React and SASS.',
     link: {
       github: 'https://github.com/rameshx/portfolio',
       live: '#',
