@@ -1,109 +1,134 @@
 @use '../styles/variables' as *;
 
-h1,.h1 {
-    font-size: $font-size-h1;
+h1,
+.h1 {
+  font-size: $font-size-h1;
 }
-h2,.h2 {
-    font-size: $font-size-h2;
+h2,
+.h2 {
+  font-size: $font-size-h2;
 }
-h3,.h3 {
-    font-size: $font-size-h3;
+h3,
+.h3 {
+  font-size: $font-size-h3;
 }
-h4,.h4 {
-    font-size: $font-size-h4;
+h4,
+.h4 {
+  font-size: $font-size-h4;
 }
-h5,.h5 {
-    font-size: $font-size-h5;
+h5,
+.h5 {
+  font-size: $font-size-h5;
 }
-h6,.h6 {
-    font-size: $font-size-h6;
+h6,
+.h6 {
+  font-size: $font-size-h6;
 }
 
-p,.p {
-    font-size: $font-size-p;
-    line-height: 2.2;
+p,
+.p {
+  font-size: $font-size-p;
+  line-height: 2.2;
 }
 
 @media (max-width: 992px) {
-    $factor: 0.9;
+  $factor: 0.9;
 
-    h1,.h1 {
-        font-size: calc($font-size-h1 * $factor);
-    }
-    h2,.h2 {
-        font-size: calc($font-size-h2 * $factor);
-    }
-    h3,.h3 {
-        font-size: calc($font-size-h3 * $factor);
-    }
-    h4,.h4 {
-        font-size: calc($font-size-h4 * $factor);
-    }
-    h5,.h5 {
-        font-size: calc($font-size-h5 * $factor);
-    }
-    h6,.h6 {
-        font-size: calc($font-size-h6 * $factor);
-    }
-    
-    p,.p {
-        font-size: calc($font-size-p * $factor);
-        line-height: 2.2;
-    }   
+  h1,
+  .h1 {
+    font-size: calc($font-size-h1 * $factor);
+  }
+  h2,
+  .h2 {
+    font-size: calc($font-size-h2 * $factor);
+  }
+  h3,
+  .h3 {
+    font-size: calc($font-size-h3 * $factor);
+  }
+  h4,
+  .h4 {
+    font-size: calc($font-size-h4 * $factor);
+  }
+  h5,
+  .h5 {
+    font-size: calc($font-size-h5 * $factor);
+  }
+  h6,
+  .h6 {
+    font-size: calc($font-size-h6 * $factor);
+  }
+
+  p,
+  .p {
+    font-size: calc($font-size-p * $factor);
+  }
 }
 
 @media (max-width: 768px) {
-    $factor: 0.75;
+  $factor: 0.75;
 
-    h1,.h1 {
-        font-size: calc($font-size-h1 * $factor);
-    }
-    h2,.h2 {
-        font-size: calc($font-size-h2 * $factor);
-    }
-    h3,.h3 {
-        font-size: calc($font-size-h3 * $factor);
-    }
-    h4,.h4 {
-        font-size: calc($font-size-h4 * $factor);
-    }
-    h5,.h5 {
-        font-size: calc($font-size-h5 * $factor);
-    }
-    h6,.h6 {
-        font-size: calc($font-size-h6 * $factor);
-    }
-    
-    p,.p {
-        font-size: calc($font-size-p * $factor);
-        line-height: 2.2;
-    }   
+  h1,
+  .h1 {
+    font-size: calc($font-size-h1 * $factor);
+  }
+  h2,
+  .h2 {
+    font-size: calc($font-size-h2 * $factor);
+  }
+  h3,
+  .h3 {
+    font-size: calc($font-size-h3 * $factor);
+  }
+  h4,
+  .h4 {
+    font-size: calc($font-size-h4 * $factor);
+  }
+  h5,
+  .h5 {
+    font-size: calc($font-size-h5 * $factor);
+  }
+  h6,
+  .h6 {
+    font-size: calc($font-size-h6 * $factor);
+  }
+
+  p,
+  .p {
+    font-size: calc($font-size-p * $factor);
+  }
 }
 
 @media (max-width: 576px) {
-    $factor: 0.65;
+  $factor: 0.65;
 
-    h1,.h1 {
-        font-size: calc($font-size-h1 * $factor);
-    }
-    h2,.h2 {
-        font-size: calc($font-size-h2 * $factor);
-    }
-    h3,.h3 {
-        font-size: calc($font-size-h3 * $factor);
-    }
-    h4,.h4 {
-        font-size: calc($font-size-h4 * $factor);
-    }
-    h5,.h5 {
-        font-size: calc($font-size-h5 * $factor);
-    }
-    h6,.h6 {
-        font-size: calc($font-size-h6 * $factor);
-    }
-    
-    p,.p {
-        font-size: calc($font-size-p * $factor);
-        line-height: 2.2;
-    }  
+  h1,
+  .h1 {
+    font-size: calc($font-size-h1 * $factor);
+  }
+  h2,
+  .h2 {
+    font-size: calc($font-size-h2 * $factor);
+  }
+  h3,
+  .h3 {
+    font-size: calc($font-size-h3 * $factor);
+  }
+  h4,
+  .h4 {
+    font-size: calc($font-size-h4 * $factor);
+  }
+  h5,
+  .h5 {
+    font-size: calc($font-size-h5 * $factor);
+  }
+  h6,
+  .h6 {
+    font-size: calc($font-size-h6 * $factor);
+  }
+
+  p,
+  .p {
+    font-size: calc($font-size-p * $factor);
+  }
 }

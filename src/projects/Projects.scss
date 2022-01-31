@@ -1,4 +1,4 @@
-@use "../styles/variables" as *;
+@use '../styles/variables' as *;
 
 .projects-container {
   .projects {
@@ -74,25 +74,34 @@
       }
     }
 
+    .projects-navigation {
+      margin-block-start: 2rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+
     @media (max-width: $width-xl) {
-        .project {
-            max-inline-size: 650px;
-        }
+      .project {
+        max-inline-size: 650px;
+      }
     }
     @media (max-width: $width-l) {
-        .project {
-            max-inline-size: 500px;
-        }
+      .project {
+        max-inline-size: 500px;
+      }
     }
     @media (max-width: $width-m) {
-        .project {
-            max-inline-size: 400px;
-        }
+      .project {
+        max-inline-size: 400px;
+      }
     }
     @media (max-width: $width-s) {
-        .project {
-            max-inline-size: 80vw;
-        }
+      .project {
+        max-inline-size: 80vw;
+      }
     }
   }
 }

@@ -1,8 +1,13 @@
-import TimerOutlinedIcon from "@mui/icons-material/TimerOutlined";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useRef } from 'react';
 
-import "swiper/css";
-import "./Projects.scss";
+import Fab from '@mui/material/Fab';
+import TimerOutlinedIcon from '@mui/icons-material/TimerOutlined';
+import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
+import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import './Projects.scss';
 
 const Project = () => {
   return (
@@ -14,8 +19,7 @@ const Project = () => {
         <p className="description">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero quae
           odit eius explicabo quibusdam sapiente. Dolorum reprehenderit illo,
-          aliquid eveniet laborum autem fugiat amet veritatis rem incidunt
-          quisquam, numquam laudantium.
+          aliquid eveniet laborum.
         </p>
         <hr />
         <h5 className="name">React Timer</h5>
@@ -25,11 +29,19 @@ const Project = () => {
 };
 
 export const Projects = () => {
+  const swiperRef = useRef(null);
+
   return (
     <section className="projects-container">
       <div className="projects">
         <h2>My Projects</h2>
-        <Swiper centeredSlides slidesPerView={'auto'} spaceBetween={16}>
+        <Swiper
+          ref={swiperRef}
+          centeredSlides
+          grabCursor
+          slidesPerView={'auto'}
+          spaceBetween={16}
+        >
           <SwiperSlide>
             <Project />
           </SwiperSlide>
@@ -46,6 +58,20 @@ export const Projects = () => {
             <Project />
           </SwiperSlide>
         </Swiper>
+        <div className="projects-navigation">
+          <Fab
+            color="primary"
+            onClick={() => swiperRef.current.swiper.slidePrev()}
+          >
+            <ArrowBackOutlinedIcon />
+          </Fab>
+          <Fab
+            color="secondary"
+            onClick={() => swiperRef.current.swiper.slideNext()}
+          >
+            <ArrowForwardOutlinedIcon />
+          </Fab>
+        </div>
       </div>
     </section>
   );
