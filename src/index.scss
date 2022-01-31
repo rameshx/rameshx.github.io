@@ -23,6 +23,20 @@ body {
   line-height: 1;
 }
 
+.link-primary {
+  outline: 0;
+  display: inline-block;
+  text-decoration: none;
+  color: index.$color-text-2;
+  border-bottom: 1px solid transparent;
+  line-height: 1;
+
+  &:hover, &:active, &:focus {
+    border-bottom: 1px solid index.$color-primary;
+    color: index.$color-primary;
+  }
+}
+
 .fab {
   inline-size: 4rem;
   block-size: 4rem;

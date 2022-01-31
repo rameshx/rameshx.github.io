@@ -1,0 +1,84 @@
+@use '../styles/variables' as *;
+
+.footer {
+  background: $background-section;
+
+  .container {
+    padding-block: 5rem;
+    padding-inline: 1rem;
+  }
+
+  $contact-spacing: 2rem;
+
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-around;
+    align-items: start;
+    justify-items: start;
+    gap: $contact-spacing;
+
+    h2,
+    h3,
+    h5 {
+      margin: 0;
+      color: $color-text-1;
+      font-weight: 600;
+    }
+
+    h2 {
+        line-height: 1;
+    }
+
+    .links {
+        grid-row: 1 / 3;
+        grid-column: 2 / 3;
+
+        h5 {
+            margin-bottom: $contact-spacing;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            display: flex;
+            flex-direction: column;
+            gap: $contact-spacing;
+        }
+    }
+  }
+
+  hr {
+    margin-block: $contact-spacing;
+  }
+
+  .copyright {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    p {
+      margin: 0;
+      color: $color-text-2;
+    }
+  }
+}
+
+@media (max-width: $width-m) {
+    .footer {
+        .contact {
+            text-align: center;
+            grid-template-columns: auto;
+            justify-content: center;
+            justify-items: center;
+
+            .links {
+                grid-area: auto;
+            }
+        }
+    }
+}

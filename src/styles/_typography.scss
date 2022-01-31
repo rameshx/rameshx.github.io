@@ -31,6 +31,10 @@ p,
   line-height: 2.2;
 }
 
+.link-primary {
+  font-size: $font-size-link-primary;
+}
+
 @media (max-width: 992px) {
   $factor: 0.9;
 
@@ -62,6 +66,10 @@ p,
   p,
   .p {
     font-size: calc($font-size-p * $factor);
+  }
+
+  .link-primary {
+    font-size: calc($font-size-link-primary * $factor);
   }
 }
 
@@ -97,6 +105,10 @@ p,
   .p {
     font-size: calc($font-size-p * $factor);
   }
+
+  .link-primary {
+    font-size: calc($font-size-link-primary * $factor);
+  }
 }
 
 @media (max-width: 576px) {
@@ -130,5 +142,9 @@ p,
   p,
   .p {
     font-size: calc($font-size-p * $factor);
+  }
+
+  .link-primary {
+    font-size: calc($font-size-link-primary * $factor);
   }
 }
