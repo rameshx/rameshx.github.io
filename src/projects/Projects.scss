@@ -15,6 +15,7 @@
 
     .swiper-slide {
       width: auto;
+      height: auto;
     }
 
     .project {
@@ -23,6 +24,7 @@
       display: inline-block;
       position: relative;
 
+      block-size: calc(100% - $icon-wrapper-size/2);
       max-inline-size: 700px;
       border: 2px solid $border-color-1;
       border-radius: 1.5rem;
@@ -85,6 +87,10 @@
 
         .name {
           color: $color-text-1;
+          margin: 0;
+        }
+
+        p {
           margin: 0;
         }
       }

@@ -82,7 +82,7 @@ const Project = ({
         <p className="description">{description}</p>
         <hr />
         <h5 className="name">{name}</h5>
-        <span>
+        <p>
           <a
             className="link"
             href={github}
@@ -100,7 +100,7 @@ const Project = ({
           >
             Live
           </a>
-        </span>
+        </p>
       </div>
     </div>
   );
