@@ -9,6 +9,8 @@
 
 body {
   margin: 0;
+  padding-block-start: index.$header-height;
+
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,19 +18,22 @@ body {
 
 .link {
   display: inline-block;
+
+  border-bottom: 1px solid index.$color-secondary;
+
   color: index.$color-secondary;
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 1px solid index.$color-secondary;
   line-height: 1;
 }
 
 .link-primary {
   outline: 0;
+  border-bottom: 1px solid transparent;
+  
   display: inline-block;
   text-decoration: none;
   color: index.$color-text-2;
-  border-bottom: 1px solid transparent;
   line-height: 1;
 
   &:hover, &:active, &:focus {
