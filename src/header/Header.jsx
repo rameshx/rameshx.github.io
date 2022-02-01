@@ -30,9 +30,11 @@ const setupHeader = () => {
 };
 
 export const Header = () => {
+  const [isMobileNavOpen, setMobileNav] = useState(false);
+
   useEffect(setupHeader, []);
 
-  const [isMobileNavOpen, setMobileNav] = useState(false);
+  const onInternalLinkClick = () => setMobileNav(false);
 
   return (
     <header className={`header${isMobileNavOpen ? ' mobile-nav-visible' : ''}`}>
@@ -42,33 +44,56 @@ export const Header = () => {
         <nav className="nav">
           <ul className="nav-list">
             <li className="list-item">
-              <a href="#about" className="link-primary">
+              <a
+                onClick={onInternalLinkClick}
+                href="#about"
+                className="link-primary"
+              >
                 ABOUT
               </a>
             </li>
             <li className="list-item">
-              <a href="#skills" className="link-primary">
+              <a
+                onClick={onInternalLinkClick}
+                href="#skills"
+                className="link-primary"
+              >
                 SKILLS
               </a>
             </li>
             <li className="list-item">
-              <a href="#experience" className="link-primary">
+              <a
+                onClick={onInternalLinkClick}
+                href="#experience"
+                className="link-primary"
+              >
                 EXPERIENCE
               </a>
             </li>
             <li className="list-item">
-              <a href="#projects" className="link-primary">
+              <a
+                onClick={onInternalLinkClick}
+                href="#projects"
+                className="link-primary"
+              >
                 PROJECTS
               </a>
             </li>
           </ul>
         </nav>
 
-        <a href="#contact" className="link link-contact">
+        <a
+          onClick={onInternalLinkClick}
+          href="#contact"
+          className="link link-contact"
+        >
           CONTACT
         </a>
 
-        <button className="fab mobile-nav-toggle" onClick={() => setMobileNav((prev) => !prev)}>
+        <button
+          className="fab mobile-nav-toggle"
+          onClick={() => setMobileNav((prev) => !prev)}
+        >
           {isMobileNavOpen ? <CloseOutlinedIcon /> : <MenuOutlinedIcon />}
         </button>
       </div>

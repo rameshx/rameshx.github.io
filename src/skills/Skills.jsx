@@ -50,7 +50,7 @@ const SKILLS = [
 
 export const Skills = () => {
   return (
-    <section className="skills-container">
+    <section id="skills" className="skills-container">
       <div className="container skills">
         <h2>My Skills</h2>
         <div className="tabs">

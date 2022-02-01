@@ -2,7 +2,7 @@ import "./Experience.scss";
 
 export const Experience = () => {
   return (
-    <section className="experience-container">
+    <section id="experience" className="experience-container">
       <div className="container experience">
         <h2>My Work Experience</h2>
         <div className="timeline">

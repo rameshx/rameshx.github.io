@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding-block-start: index.$header-height;
@@ -30,7 +34,7 @@ body {
 .link-primary {
   outline: 0;
   border-bottom: 1px solid transparent;
-  
+
   display: inline-block;
   text-decoration: none;
   color: index.$color-text-2;

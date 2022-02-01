@@ -110,7 +110,7 @@ export const Projects = () => {
   const swiperRef = useRef(null);
 
   return (
-    <section className="projects-container">
+    <section id="projects" className="projects-container">
       <div className="projects">
         <h2>My Projects</h2>
         <Swiper
