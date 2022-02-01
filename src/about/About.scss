@@ -1,0 +1,121 @@
+@use '../styles/variables' as *;
+
+.about-wrapper {
+  padding-block-start: $header-height;
+  background-color: $background-section;
+
+  .about-container {
+    h1,
+    p {
+      margin: 0;
+    }
+
+    padding-block: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .part-a {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      .bg {
+        svg {
+          width: 500px;
+          aspect-ratio: 1;
+        }
+      }
+
+      .logos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        svg {
+          width: 48px;
+          aspect-ratio: 1;
+        }
+      }
+    }
+
+    .part-b {
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .intro {
+        h1 {
+          font-weight: 600;
+          color: $color-text-1;
+          line-height: 1.1;
+        }
+        p {
+          color: $color-text-2;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $width-xl) {
+  .about-wrapper {
+    .about-container {
+      .part-a {
+        .bg {
+          svg {
+            width: 400px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $width-l) {
+  .about-wrapper {
+    .about-container {
+      flex-direction: column;
+      .part-a {
+        flex-direction: row;
+      }
+
+      .part-b {
+        margin-inline: auto;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: $width-m) {
+  .about-wrapper {
+    .about-container {
+      padding-block-start: 3rem;
+
+      .part-a {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media (max-width: $width-s) {
+  .about-wrapper {
+    .about-container {
+      padding-block-start: 1rem;
+
+      .part-a {
+        .bg {
+          svg {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

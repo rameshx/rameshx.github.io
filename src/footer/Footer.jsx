@@ -1,4 +1,5 @@
 import { Ramesh } from '../assets/Ramesh';
+import { EMAIL, GITHUB, LINKEDIN, STACK_OVERFLOW, WHATSAPP } from '../Constants';
 import './Footer.scss';
 
 export const Footer = () => {
@@ -13,7 +14,7 @@ export const Footer = () => {
           </h2>
           <h3>
             Start by{' '}
-            <a className="link" href="mailto:rameshreddyx@gmail.com">
+            <a className="link" href={`mailto:${EMAIL}`}>
               saying hi
             </a>
           </h3>
@@ -23,7 +24,7 @@ export const Footer = () => {
               <li>
                 <a
                   className="link-primary"
-                  href="mailto:rameshreddyx@gmail.com"
+                  href={`mailto:${EMAIL}`}
                 >
                   Email
                 </a>
@@ -31,7 +32,7 @@ export const Footer = () => {
               <li>
                 <a
                   className="link-primary"
-                  href="https://wa.me/917013608340"
+                  href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -41,7 +42,7 @@ export const Footer = () => {
               <li>
                 <a
                   className="link-primary"
-                  href="https://www.linkedin.com/in/rameshreddyp/"
+                  href={LINKEDIN}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -51,7 +52,7 @@ export const Footer = () => {
               <li>
                 <a
                   className="link-primary"
-                  href="https://stackoverflow.com/users/9765167/ramesh-reddy"
+                  href={STACK_OVERFLOW}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -61,7 +62,7 @@ export const Footer = () => {
               <li>
                 <a
                   className="link-primary"
-                  href="https://github.com/rameshx"
+                  href={GITHUB}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -73,7 +74,7 @@ export const Footer = () => {
         </div>
         <hr />
         <div className="copyright">
-          <Ramesh />
+          <a href="#about"><Ramesh /></a>
           <p>© 2022</p>
         </div>
       </div>

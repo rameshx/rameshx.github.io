@@ -39,7 +39,7 @@ export const Header = () => {
   return (
     <header className={`header${isMobileNavOpen ? ' mobile-nav-visible' : ''}`}>
       <div className="container">
-        <Ramesh />
+        <a href="#about"><Ramesh /></a>
 
         <nav className="nav">
           <ul className="nav-list">
