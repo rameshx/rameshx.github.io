@@ -64,7 +64,7 @@ export const Header = () => {
           </ul>
         </nav>
 
-        <a href="#contact" className="link-primary link-contact">
+        <a href="#contact" className="link link-contact">
           CONTACT
         </a>
 

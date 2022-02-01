@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: min(2vw, 1rem);
 
     .nav {
       .nav-list {
@@ -36,6 +36,11 @@
           line-height: 1;
         }
       }
+    }
+
+    .link-contact {
+      font-size: 1.3rem;
+      font-weight: 600;
     }
 
     .mobile-nav-toggle {
@@ -107,4 +112,16 @@
       }
     }
   }
+}
+
+@media (max-width: $width-s) {
+    .header {
+        .container {
+            margin-inline: 1rem;
+
+            .link-contact {
+                font-size: 1rem;
+            }
+        }
+    }
 }
