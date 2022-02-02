@@ -12,7 +12,6 @@
 
     padding-block: 5rem;
     display: flex;
-    align-items: center;
     gap: 2rem;
 
     .part-a {
@@ -46,6 +45,7 @@
       margin-left: auto;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       gap: 2rem;
 
       .intro {
@@ -81,7 +81,7 @@
     .about-container {
       flex-direction: column;
       .part-a {
-        flex-direction: row;
+        flex-direction: column;
       }
 
       .part-b {
@@ -96,10 +96,6 @@
   .about-wrapper {
     .about-container {
       padding-block-start: 3rem;
-
-      .part-a {
-        flex-direction: column;
-      }
     }
   }
 }
