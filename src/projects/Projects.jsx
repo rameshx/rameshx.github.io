@@ -29,8 +29,8 @@ const PROJECTS = [
     description:
       'The responsive portfolio you are viewing now is built using React and SASS.',
     link: {
-      github: 'https://github.com/rameshx/portfolio',
-      live: '#',
+      github: 'https://github.com/rameshx/rameshx.github.io',
+      live: 'https://rameshx.github.io',
     },
   },
   {
