@@ -55,7 +55,7 @@ export const About = () => {
 
           <div className="stack-overflow">
             <p>
-              <strong>8500+</strong> reputation, <strong>400+</strong> answers
+              <strong>9000+</strong> reputation, <strong>450+</strong> answers
               <br />
               <strong>Top 1%</strong> Stack Overflow contributor
             </p>
