@@ -1,5 +1,5 @@
 import { Ramesh } from '../assets/Ramesh';
-import { EMAIL, GITHUB, LINKEDIN, STACK_OVERFLOW, WHATSAPP } from '../Constants';
+import { EMAIL, GITHUB, LINKEDIN, STACK_OVERFLOW } from '../Constants';
 import './Footer.scss';
 
 export const Footer = () => {
@@ -27,16 +27,6 @@ export const Footer = () => {
                   href={`mailto:${EMAIL}`}
                 >
                   Email
-                </a>
-              </li>
-              <li>
-                <a
-                  className="link-primary"
-                  href={WHATSAPP}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Whatsapp
                 </a>
               </li>
               <li>

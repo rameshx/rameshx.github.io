@@ -1,7 +1,7 @@
 import { GitHub } from '../assets/GitHub';
 import { LinkedIn } from '../assets/LinkedIn';
 import { StackOverflow } from '../assets/StackOverflow';
-import { EMAIL, GITHUB, LINKEDIN, MOBILE, STACK_OVERFLOW } from '../Constants';
+import { EMAIL, GITHUB, LINKEDIN, STACK_OVERFLOW } from '../Constants';
 import { ReactComponent as BgAbout } from '../assets/bg-about.svg';
 import './About.scss';
 
@@ -44,11 +44,6 @@ export const About = () => {
             <p>
               <a className="link" href={`mailto:${EMAIL}`}>
                 {EMAIL}
-              </a>
-            </p>
-            <p>
-              <a className="link" href={`tel:${MOBILE.replace(/\s/g, '')}`}>
-                {MOBILE}
               </a>
             </p>
           </div>
