@@ -10,7 +10,7 @@ export const Experience = () => {
             <li className="timeline-item time primary">
               <h5>Rep Connect | Reputation, Hyderabad</h5>
               <p>
-                <time>NOVEMBER 2020 - PRESENT</time>
+                <time>NOVEMBER 2020 - JUNE 2022</time>
               </p>
             </li>
             <li className="timeline-item description primary">

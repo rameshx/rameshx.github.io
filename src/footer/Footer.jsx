@@ -65,7 +65,7 @@ export const Footer = () => {
         <hr />
         <div className="copyright">
           <a href="#about"><Ramesh /></a>
-          <p>© 2022</p>
+          <p>© 2023</p>
         </div>
       </div>
     </footer>
