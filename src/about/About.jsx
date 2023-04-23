@@ -50,10 +50,9 @@ export const About = () => {
 
           <div className="stack-overflow">
             <p>
-              <strong>9000+</strong> reputation, <strong>450+</strong> answers
-              <br />
-              <strong>Top 1%</strong> Stack Overflow contributor
+              <strong>10000+</strong> reputation, <strong>450+</strong> answers on Stack Overflow
             </p>
+            <a href="https://stackoverflow.com/users/9765167/ramesh-reddy"><img src="https://stackoverflow.com/users/flair/9765167.png" width="208" height="58" alt="profile for Ramesh Reddy at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Ramesh Reddy at Stack Overflow, Q&amp;A for professional and enthusiast programmers" /></a>
           </div>
         </div>
       </div>
